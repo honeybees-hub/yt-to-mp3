@@ -65,7 +65,7 @@ convertBtn.addEventListener('click', function () {
     // Call our backend
     const apiBaseUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
         ? 'http://localhost:5000'
-        : 'https://YOUR-BACKEND-NAME.onrender.com'; // CHANGE THIS after deploying to Render
+        : 'https://yt-to-mp3-ir4b.onrender.com'; // CHANGE THIS after deploying to Render
 
     // Since we don't have real-time progress from the stream easily without WebSockets,
     // we'll use a smoother simulation for the progress bar while waiting for the response.
