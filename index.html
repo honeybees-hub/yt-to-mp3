@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Optimization -->
+    <title>YouTube to MP3 Converter - Fast, Free & Secure</title>
+    <meta name="description" content="Convert YouTube videos to MP3 audio files instantly. Free, secure, and easy-to-use YouTube to MP3 tool with high-quality output. No registration required.">
+    <meta name="keywords" content="youtube to mp3, mp3 converter, youtube audio downloader, free mp3 converter, fast video converter">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="YT2MP3 Tools">
+    <link rel="canonical" href="https://www.example.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎵</text></svg>">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="YouTube to MP3 Converter - Fast & Free">
+    <meta property="og:description" content="Convert YouTube videos to MP3 audio files instantly with our free tool.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=YT+to+MP3+Converter">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>YouTube to MP3 Converter</h1>
+        <p>The fastest way to download audio from YouTube videos.</p>
+    </header>
+
+    <main>
+        <!-- Tool Section -->
+        <section class="converter-card" aria-label="Converter Tool">
+            <div class="input-group">
+                <label for="videoUrl" class="input-label">Insert Video Link</label>
+                <!-- DEEP FIX: aria-describedby for accessibility error linking -->
+                <input type="text" id="videoUrl" 
+                       placeholder="https://www.youtube.com/watch?v=..." 
+                       aria-label="YouTube Video URL" 
+                       aria-describedby="urlError"
+                       autocomplete="off">
+                <div id="urlError" class="error-message" role="alert">Please enter a valid YouTube URL (e.g., youtube.com/watch?v=...)</div>
+            </div>
+
+            <div class="input-group">
+                <label for="formatSelect" class="input-label">Select Audio Format</label>
+                <select id="formatSelect" class="format-select" aria-label="Audio Format">
+                    <option value="mp3">MP3 (320kbps)</option>
+                    <option value="m4a">M4A (AAC)</option>
+                    <option value="wav">WAV (Lossless)</option>
+                    <option value="flac">FLAC (High Quality)</option>
+                    <option value="ogg">OGG (Vorbis)</option>
+                </select>
+            </div>
+
+            <button id="convertBtn" class="convert-btn">Convert to Audio</button>
+
+            <!-- Progress Section (Hidden initially) -->
+            <!-- DEEP FIX: Proper ARIA roles for progress bar -->
+            <div class="progress-container" id="progressContainer" role="region" aria-label="Conversion Progress">
+                <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="progressTrack">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <p class="status-text" id="statusText">Initializing...</p>
+            </div>
+
+            <!-- Result Section (Hidden initially) -->
+            <div class="success-message" id="successMessage" role="alert">
+                <span class="success-icon" aria-hidden="true">&#10003;</span>
+                <h3>Conversion Complete!</h3>
+                <p style="color: #555; margin-top: 5px; margin-bottom: 15px;">"My_Video_Song.mp3" is ready.</p>
+                <button id="downloadBtn" class="download-btn">Download Now</button>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section class="info-section">
+            <h2 class="section-title">How to Use This Tool</h2>
+            <!-- DEEP FIX: Changed to Ordered List (ol) for semantics -->
+            <ol class="steps-grid">
+                <li class="step-card">
+                    <div class="step-icon" aria-hidden="true">1</div>
+                    <h3>Copy URL</h3>
+                    <p>Go to YouTube, find your favorite video, and copy the URL from the address bar.</p>
+                </li>
+                <li class="step-card">
+                    <div class="step-icon" aria-hidden="true">2</div>
+                    <h3>Paste Link</h3>
+                    <p>Paste the link into our converter box above and click the "Convert" button.</p>
+                </li>
+                <li class="step-card">
+                    <div class="step-icon" aria-hidden="true">3</div>
+                    <h3>Download</h3>
+                    <p>Wait a few seconds for the conversion to finish, then download your MP3 file.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="info-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-1">Is this converter free to use?</button>
+                    <div id="faq-1" class="faq-answer">
+                        <p>Yes, our YouTube to MP3 converter is completely free to use. You can convert as many videos as you want without any hidden charges or subscription fees.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-2">Do I need to install software?</button>
+                    <div id="faq-2" class="faq-answer">
+                        <p>No, this tool works entirely in your web browser. You don't need to download or install any additional software or apps to use our service.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-3">Is it safe to use?</button>
+                    <div id="faq-3" class="faq-answer">
+                        <p>Absolutely. We use secure connections and do not store any user data. Your privacy is important to us, and the downloaded files are free from viruses.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-4">Does it work on mobile?</button>
+                    <div id="faq-4" class="faq-answer">
+                        <p>Yes, our tool is fully responsive and works perfectly on Android, iOS (iPhone/iPad), Windows, Mac, and Linux devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 YouTube to MP3 Converter. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; color: #777;">
+            Disclaimer: This tool is for personal use only. Please respect copyright laws and the terms of service of the video platform.
+        </p>
+    </footer>
+
+    <!-- External Script -->
+    <script src="script.js" defer></script>
+</body>
+</html>
